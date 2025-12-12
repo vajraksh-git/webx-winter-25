@@ -3,6 +3,7 @@
 <title>Portfolio|vajraksh</title>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         :root{
             --primary: black;
@@ -105,6 +106,16 @@
             color: black;
             font-weight: bold;
         }
+        @media (max-width: 550px) {
+            .hero {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -165,12 +176,6 @@
         <a href="https://github.com/vajraksh-git" target="_blank" title="GitHub">GitHub</a>
     </footer>
 </body>
-
-
-
-
-
-
 
 
 </html>

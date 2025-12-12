@@ -47,6 +47,7 @@ async function getweather(){
     }catch(error){
         console.log("Error in fetching weather:",error);
         document.getElementById("result").innerHTML=`<h3 style='color:red'>${error.message}</h3>`;
+        
     }
 }
 
