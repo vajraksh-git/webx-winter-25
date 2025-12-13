@@ -7,7 +7,7 @@ async function getlatlon(){
         const cityname=city.value;
         const apikey='d1a3966500f831fcfe7a43d855bd7636';
         const limit=5;
-        const url=`http://api.openweathermap.org/geo/1.0/direct?q=${cityname}&limit=${limit}&appid=${apikey}`;
+        const url=`https://api.openweathermap.org/geo/1.0/direct?q=${cityname}&limit=${limit}&appid=${apikey}`;
         console.log(url);
         const response = await fetch(url);
         if (!response){
