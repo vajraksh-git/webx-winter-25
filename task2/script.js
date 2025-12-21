@@ -41,6 +41,7 @@ async function getweather(){
         const result = await response.json();
         const weather = result.weather[0].main;
         const temp = result.main.temp;
+        console.log(url);
         console.log(`Weather in ${cityname}: ${weather}, Temperature: ${temp}°C`);
         document.getElementById("result").innerHTML=`<h3 class="main">${weather}</h3>
                                                     <h2 class="temp">${temp}°C</h2>`;

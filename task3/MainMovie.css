@@ -1,0 +1,88 @@
+/* Container for the whole card */
+.MainMovie {
+  margin-inline: auto;
+  display: flex;
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d); /* Subtle dark gradient */
+  color: white;
+  border-radius: 12px;
+  overflow: hidden; /* Keeps the image corners rounded */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for pop */
+  max-width: 800px; /* Or 100% depending on your layout */
+  height: 300px; /* Fixed height for consistency */
+}
+
+/* LEFT SIDE: Image */
+.MainMovie-image {
+  flex: 0 0 40%; /* Takes up 40% of the width */
+  position: relative;
+}
+
+.MainMovie-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills space without stretching */
+  display: block;
+}
+
+/* RIGHT SIDE: Content Wrapper */
+.MainMovie-content {
+  flex: 1; /* Takes remaining space */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically centers the text */
+  gap: 20px; /* Space between details and button */
+}
+
+/* Typography Details */
+.MainMovie-details h2 {
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.MainMovie-meta {
+  display: flex;
+  gap: 15px;
+  font-size: 0.9rem;
+  color: #a0a0a0; /* Lighter grey for metadata */
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.rating {
+  color: #f5c518; /* IMDB Yellow */
+  font-weight: bold;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #cccccc;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* Watch Now Button */
+.watchnow-btn {
+  background-color: #e50914; /* Netflix Red */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease, transform 0.2s;
+  text-transform: uppercase;
+}
+
+.watchnow-btn:hover {
+  background-color: #f40612;
+  transform: scale(1.05); /* Slight grow effect */
+}   
