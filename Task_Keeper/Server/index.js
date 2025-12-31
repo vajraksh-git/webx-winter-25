@@ -3,9 +3,11 @@ import axios from "axios";
 import express from "express";
 import { Task } from "./models/Task.js";
 import cors from "cors";
+import dotenv from "dotenv";
 
+dotenv.config();
 
-const password="pymail"
+const password=process.env.MONGO_PASSWORD;
 const uri = `mongodb+srv://pymail:${password}@cluster0.d8jgeoh.mongodb.net/?appName=Cluster0`;
 const port = 3000;
 
