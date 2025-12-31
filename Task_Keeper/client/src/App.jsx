@@ -8,7 +8,7 @@ function App() {
   const [currentuser , setCurrentUser ] = useState(null)
   const [ items , setItems ] = useState([]) 
   const [text , setText ] = useState("")
-  const url = "http://localhost:3000"
+  const url = "https://keeper-backend-vj.onrender.com"
   //------------adding and deleting items functions----------------//
   async function fetchData(){
     try{
@@ -69,7 +69,7 @@ function App() {
 
   //---------------login page handeling-------------------//  
   function handleLogin(username){
-    axios.get(`http://localhost:3000/users?username=${username}`).then( response => {
+    axios.get(`${url}/users?username=${username}`).then( response => {
       const tasks = response.data;
     })
     fetchData();
