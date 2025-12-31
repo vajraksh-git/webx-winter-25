@@ -1,0 +1,154 @@
+/* App.css */
+
+/* 1. Global Page Background (Matches Login) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'McLaren', 'Segoe UI', sans-serif; /* Fallback fonts included */
+  /* The Dotted Notebook Pattern */
+  background-color: #f8f9fa;
+  background-image: radial-gradient(#e5e5e5 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  min-height: 100vh;
+}
+
+/* 2. Dashboard Header */
+.dashboard {
+  background-color: #f5ba13;
+  margin: auto -16px; /* Counteract default body margins if strictly needed, though body margin 0 usually handles it */
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard h1 {
+  color: #fff;
+  font-family: 'McLaren', cursive, sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+/* 3. Profile Section (User & Logout) */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.username {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.logout {
+  background-color: #fff;
+  color: #f5ba13;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout:hover {
+  background-color: #fcebbb; /* Light yellow hover */
+  transform: scale(1.05);
+}
+
+/* In App.css */
+
+.add-items-container {
+  /* RESPONSIVE FIX: Use max-width instead of fixed width */
+  width: 95%;         
+  max-width: 480px;   
+  
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  gap: 10px;
+  
+  /* Ensure padding doesn't add to the width */
+  box-sizing: border-box; 
+}
+
+/* Add this at the bottom of App.css for mobile padding adjustments */
+@media (max-width: 500px) {
+  .dashboard {
+    padding: 16px 20px; /* Smaller padding on mobile header */
+  }
+  
+  .items-container {
+    padding: 10px; /* Less padding around the grid */
+    gap: 10px;
+  }
+}
+.item-input {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+  color: #555;
+}
+
+.add-btn {
+  background-color: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 0.8rem; /* Small text or use an icon if you had one */
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+  
+  /* Centering the text inside the circle button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background-color: #ff9f43;
+  transform: scale(1.1);
+}
+
+/* 5. The Grid for Notes */
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center notes on screen */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Optional: If your Item.jsx returns a div, this ensures it looks like a note 
+   even if you haven't styled Item.css yet. */
+.items-container > div {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 10px;
+  float: left;
+  text-align: left;
+}

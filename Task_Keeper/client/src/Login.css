@@ -1,0 +1,125 @@
+/* Login.css */
+
+/* 1. The Background: Light, but with a 'drawing/paper' feel */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  
+  /* Modern off-white background */
+  background-color: #f8f9fa;
+  
+  /* CSS-only Dotted Paper Pattern */
+  background-image: radial-gradient(#e5e5e5 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* 2. The Card: Pops out from the background */
+.login-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  
+  /* Soft shadow for depth */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 
+              0 4px 6px rgba(0, 0, 0, 0.02);
+  
+  text-align: center;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* 3. Typography & Header */
+.login-header h1 {
+  /* The "Keeper" Font style */
+  font-family: 'McLaren', cursive, sans-serif; /* If you have this font */
+  font-size: 2.5rem;
+  color: #f5ba13; /* The Keeper Yellow/Orange */
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+
+.login-header p {
+  color: #8f8f8f;
+  margin-bottom: 30px;
+  font-size: 0.9rem;
+}
+
+/* 4. Form Styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensures padding doesn't break width */
+}
+
+/* 5. Focus State: The Yellow/Orange Glow */
+.input-group input:focus {
+  outline: none;
+  border-color: #f5ba13;
+  box-shadow: 0 0 0 3px rgba(245, 186, 19, 0.15);
+}
+
+/* 6. The Button */
+.submit-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  
+  /* Gradient Orange/Yellow */
+  background: linear-gradient(135deg, #f5ba13 0%, #ff9f43 100%);
+  
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(245, 186, 19, 0.4);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* In Login.css - Add to the bottom */
+
+@media (max-width: 450px) {
+  .login-card {
+    width: 90%;       /* Leave a little margin on the sides */
+    padding: 25px;    /* Reduce internal padding */
+    margin: 0 15px;   /* Safety margin */
+  }
+
+  .login-header h1 {
+    font-size: 2rem;  /* Slightly smaller title */
+  }
+}
