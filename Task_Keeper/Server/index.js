@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import axios from "axios";
 import express from "express";
 import { Task } from "./models/Task.js";
 import cors from "cors";
 import dotenv from "dotenv";
+import yt_Search from "yt-search"
 
 dotenv.config();
 
@@ -59,3 +59,26 @@ App.delete("/tasks:id" , async(req,res) => {
 App.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+
+
+
+//-----------backend for sasta youtube----------//
+
+
+
+async function search(params) {
+    const result= await yt_Search(params);
+    const videos = result.videos.slice(0,5);
+    return videos;
+}
+
+App.use(express.json());
+App.use(cors());
+
+App.get("/search" , async(req , res)=> {
+    const searchitem= req.query.searchitem;
+    const result = await search(searchitem);
+    res.status(201).json(result);
+    console.log("/search --Searching for :"+ searchitem)
+})
